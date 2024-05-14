@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/Page.css' %}">
+    <title>Title</title>
+    <div class = 'tohome'>
+    <a class="nav-list-link selected" href={% url 'page' %}>Ко всем продуктам</a>
+</div>
+
+<div class = 'type_production'>
+        <h3>Тип - Оцинкованная продукция</h3>
+</div>
+</head>
+<body>
+
+<form action="/ocitog/">
+    <div class = 'mainparam paramm'>
+<span class = 'metall_select'>
+    <h3>Рулон/Лист</h3>
+    <select id="type_of" name="rul/list">
+            <option value="-" disabled  selected>-</option>
+        <option value="l">Лист</option>
+        <option value="r">Рулон</option>
+    </select>
+
+    </span>
+        <span class = 'pokritie_select'>
+    <h3>Толщина покрытия (гр/м2)</h3>
+    <select id="type_of_cover" name="cover">
+            <option value="-" disabled  selected>-</option>
+        <option value="275">275 </option>
+        <option value="200">200 </option>
+        <option value="180">180 </option>
+        <option value="140">140 </option>
+        <option value="120">120</option>
+    </select>
+
+    </span>
+<span class = "width">
+    <h3>Ширина (мм)</h3>
+    <input type = 'number' value = '' min="600" max ="2000" id ='width' name="width">
+</span>
+<span class = "amount">
+    <h3>Толщина (мм)</h3>
+    <input type = 'number' value = '' id ='thickness' step = 0.01 min="0.25" max ="2" name="thickness"></input>
+</span>
+<span class = "amount">
+    <h3>Заказываемый объем (т)</h3>
+    <input type = 'number' value = '' id ='amount' name="amount" min="1"></input>
+
+</span></br></br>
+         <input type="hidden" name="profiles" val="0">
+        <input type="checkbox" name ="profiles">Производство законченных профилей </input></br>
+        <input type="hidden" name="not_recover" val="0">
+        <input type="checkbox" name = "not_recover">Невозвратные рамы </input></br>
+        <h3>Сорт</h3>
+        <select id="type_of_s" name="sort">
+            <option value="-" disabled  selected>-</option>
+        <option value="6">Стандартный</option>
+        <option value="10">Второй сорт</option>
+            <option value="20">Третий сорт</option>
+    </select>
+        </div>
+    <div class = "otherparam paramm">
+    <div class = "non"><span class="city_select">
+    <h3>Станция доставки</h3>
+        <select id="city" name = "city">
+            <option value="-" disabled  selected>-</option>
+            <option value="АБАКАН">АБАКАН</option>
+<option value="АВТОВО">АВТОВО</option>
+<option value="АЛТАЙСКАЯ">АЛТАЙСКАЯ</option>
+<option value="АНЗЕБИ">АНЗЕБИ</option>
+<option value="АНТРОПШИНО">АНТРОПШИНО</option>
+<option value="АППАРАТНАЯ">АППАРАТНАЯ</option>
+<option value="АРТЕМ-ПРИМОРСКИЙ-1">АРТЕМ-ПРИМОРСКИЙ-1</option>
+<option value="АСТРАХАНЬ-1">АСТРАХАНЬ-1</option>
+<option value="АЧИНСК-1">АЧИНСК-1</option>
+<option value="АЧИНСК-2">АЧИНСК-2</option>
+<option value="БАГУЛЬНАЯ">БАГУЛЬНАЯ</option>
+<option value="БАЗАИХА">БАЗАИХА</option>
+<option value="БАЛАКОВО">БАЛАКОВО</option>
+<option value="БАЛАШИХА">БАЛАШИХА</option>
+<option value="БАРНАУЛ">БАРНАУЛ</option>
+<option value="БАТАЙСК">БАТАЙСК</option>
+<option value="БАТАРЕЙНАЯ">БАТАРЕЙНАЯ</option>
+<option value="БАХАРЕВКА">БАХАРЕВКА</option>
+<option value="БЕЗЫМЯНКА">БЕЗЫМЯНКА</option>
+<option value="БЕЛОРЕЦК">БЕЛОРЕЦК</option>
+<option value="БЕЛЫЙ РАСТ">БЕЛЫЙ РАСТ</option>
+<option value="БЕРДСК">БЕРДСК</option>
+<option value="БЕТОННАЯ ТОВАРНАЯ">БЕТОННАЯ ТОВАРНАЯ</option>
+<option value="БИЙСК">БИЙСК</option>
+<option value="БИРЮЛЕВО ТОВАРНАЯ">БИРЮЛЕВО ТОВАРНАЯ</option>
+<option value="БИРЮЛИ">БИРЮЛИ</option>
+<option value="БЛАГОВЕЩЕНСК">БЛАГОВЕЩЕНСК</option>
+<option value="БОКИНО">БОКИНО</option>
+<option value="БОКСИТЫ">БОКСИТЫ</option>
+<option value="БРАТСК">БРАТСК</option>
+<option value="БУГАЧ">БУГАЧ</option>
+<option value="БУГУЛЬМА">БУГУЛЬМА</option>
+<option value="БЫКОВО">БЫКОВО</option>
+<option value="ВАХИТОВО">ВАХИТОВО</option>
+<option value="ВЕРХНЯЯ ТЕРРАСА">ВЕРХНЯЯ ТЕРРАСА</option>
+<option value="ВЛАДИКАВКАЗ">ВЛАДИКАВКАЗ</option>
+<option value="ВОДИНСКАЯ">ВОДИНСКАЯ</option>
+<option value="ВОЖОЙ">ВОЖОЙ</option>
+<option value="ВОЙНОВКА">ВОЙНОВКА</option>
+<option value="ВОЛГОГРАД 2">ВОЛГОГРАД 2</option>
+<option value="ВОЛОГДА-2">ВОЛОГДА-2</option>
+<option value="ВОЛЖСКИЙ">ВОЛЖСКИЙ</option>
+<option value="ВОССТАНИЕ">ВОССТАНИЕ</option>
+<option value="ВТОРАЯ РЕЧКА">ВТОРАЯ РЕЧКА</option>
+<option value="ГНИЛОВСКАЯ">ГНИЛОВСКАЯ</option>
+<option value="ГОНЧАРОВО">ГОНЧАРОВО</option>
+<option value="ГРИВНО">ГРИВНО</option>
+<option value="ГУДЕРМЕС">ГУДЕРМЕС</option>
+<option value="ДАВЛЕКАНОВО">ДАВЛЕКАНОВО</option>
+<option value="ДЕМА">ДЕМА</option>
+<option value="ДИНСКАЯ">ДИНСКАЯ</option>
+<option value="ДОЛГУШИНО">ДОЛГУШИНО</option>
+<option value="ЕНИСЕЙ">ЕНИСЕЙ</option>
+<option value="ЕКАТЕРИНБУРГ-ТОВАРНЫЙ">ЕКАТЕРИНБУРГ-ТОВАРНЫЙ</option>
+<option value="ЕЛЬШАНКА">ЕЛЬШАНКА</option>
+<option value="ЖАСМИННАЯ">ЖАСМИННАЯ</option>
+<option value="ЖИГУЛЁВСКОЕ МОРЕ">ЖИГУЛЁВСКОЕ МОРЕ</option>
+<option value="ЗАВОДСКАЯ">ЗАВОДСКАЯ</option>
+<option value="ЗАУДИНСКИЙ">ЗАУДИНСКИЙ</option>
+<option value="ЗВЕРЕВСКАЯ">ЗВЕРЕВСКАЯ</option>
+<option value="ЗЕЛЁНЫЙ БОР">ЗЕЛЁНЫЙ БОР</option>
+<option value="ЗЕРНОГРАД">ЗЕРНОГРАД</option>
+<option value="ЗОРИНСКИЙ">ЗОРИНСКИЙ</option>
+<option value="ИВАНТЕЕВКА">ИВАНТЕЕВКА</option>
+<option value="ИГЛИНО">ИГЛИНО</option>
+<option value="ИЖЕВСК">ИЖЕВСК</option>
+<option value="ИЖОРЫ">ИЖОРЫ</option>
+<option value="ИКША">ИКША</option>
+<option value="ИЛАНКА">ИЛАНКА</option>
+<option value="ИМ МАКСИМА ГОРЬКОГО">ИМ МАКСИМА ГОРЬКОГО</option>
+<option value="ЙОШКАР-ОЛА">ЙОШКАР-ОЛА</option>
+<option value="ИРБИТ">ИРБИТ</option>
+<option value="ИРКУТСК-ПАССАЖИРСКИЙ">ИРКУТСК-ПАССАЖИРСКИЙ</option>
+<option value="ИСЕТЬ">ИСЕТЬ</option>
+<option value="ИШАНОВО">ИШАНОВО</option>
+<option value="КАМЕНОЛОМНИ">КАМЕНОЛОМНИ</option>
+<option value="КАМЫШТА">КАМЫШТА</option>
+<option value="КАНСК-ЕНИСЕЙСКИЙ">КАНСК-ЕНИСЕЙСКИЙ</option>
+<option value="КАРАБУЛА">КАРАБУЛА</option>
+<option value="КАРБЫШЕВО-1">КАРБЫШЕВО-1</option>
+<option value="КАЯ">КАЯ</option>
+        </select>
+</span>
+<span class = 'credit_select'>
+        <h3>БГ\кредит</h3>
+    <select id="type_credit" name="credit">
+        <option value="-" disabled  selected>-</option>
+        <option value="0">нет</option>
+        <option value="15">15 дней</option>
+        <option value="30">30 дней</option>
+    </select>
+</span>
+    <span>
+        <h3>Договор с отсрочкой</h3>
+        <input type="hidden" name="dogovor" val="0">
+<input type="checkbox" name = "dogovor"></br>
+    </span>
+        </br>
+    <div><button type='submit'>Рассчитать</button></div>
+        </div>
+</form>
+</body>
+</html>

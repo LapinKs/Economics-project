@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="{% static 'css/Page.css' %}">
+    <title>Title</title>
+</head>
+<body>
+
+    <h2>Выберите тип продукции</h2>
+    <div >
+    <ul class = "navigator">
+                    <li class="nav-list-element">
+                        <a class="nav-list-link selected" href={% url 'gk' %}>Горячекатанная продукция</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'hk' %}>Холоднокатанная продукция</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'js' %}>Продукция из жести</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'oc' %}>Оцинкованная продукция</a>
+                    </li>
+                    <li class="nav-list-element">
+                        <a class="nav-list-link" href={% url 'pl' %}>Продукция с полимерным покрытием</a>
+                    </li>
+                </ul>
+</div>
+</body>
+</html>

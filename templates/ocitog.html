@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+            <link rel="stylesheet" href="{% static 'css/Page.css' %}">
+    <title>Title</title>
+    <div class = 'tohome'>
+    <a class="nav-list-link selected" href={% url 'page' %}>Ко всем продуктам</a>
+</div>
+</head>
+<body>
+<div class = "paramm"><h2>Цена: {{context}} рублей </h2></div>
+</body>
+</html>
